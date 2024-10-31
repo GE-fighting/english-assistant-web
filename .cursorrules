@@ -25,13 +25,6 @@ project_structure:
 └── package.json         # Node.js项目元数据文件
 
 
-development_guidelines:
-  - Use Serde for JSON serialization/deserialization
-  - Manage environment configurations with dotenv
-  - Set up proper logging with the log crate
-  - Use SQLx for async database interactions
-  - Maintain modular separation of concerns (handlers, models, services)
-  - Ensure distinct and descriptive naming conventions for files and directories
 
 
 CONTEXT:
@@ -74,3 +67,10 @@ The reply should include:
 
 START ANALYSIS:
 If you understand, please prepare to assist me and await my question.
+
+features:
+- Management backend pages
+- user frontend pages
+  - index page
+  - follow reading page
+
