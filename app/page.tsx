@@ -1,9 +1,7 @@
 'use client'
 
-import { useEffect } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
-import { useTheme } from '@/context/ThemeContext'
 
 // Import Swiper and modules
 import { Swiper, SwiperSlide } from 'swiper/react'
@@ -68,7 +66,6 @@ const slides = [
 ]
 
 export default function HomePage() {
-  const { theme } = useTheme()
 
   return (
     <main className="min-h-screen">

@@ -1,9 +1,8 @@
 'use client'
 
-import { useTheme } from '@/context/ThemeContext'
 
 export default function VocabularyPage() {
-  const { theme } = useTheme()
+  // const { theme } = useTheme()
   
   return (
     <div className="min-h-screen">

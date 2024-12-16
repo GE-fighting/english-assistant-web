@@ -103,6 +103,7 @@ export default function WordListFilters({ onUnitChange }: WordListFiltersProps) 
     fetchVersions()
     fetchGrades()
     fetchSemesters()
+    
   }, [])
 
   // 当任何依赖的选择发生变化时，重新获取单元列表

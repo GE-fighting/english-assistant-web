@@ -6,6 +6,8 @@ import { usePathname } from 'next/navigation'
 import Image from 'next/image'
 import { useTheme } from '@/context/ThemeContext'
 
+type Theme = 'default' | 'nature' | 'minimal'
+
 const navigation = [
   { name: '首页', href: '/' },
   { name: '跟读练习', href: '/follow-reading' },
@@ -13,7 +15,7 @@ const navigation = [
   { name: '学习进度', href: '/progress' },
 ]
 
-const themes = [
+const themes: { id: Theme; icon: string; label: string }[] = [
   { id: 'default', icon: '🌸', label: '粉色主题' },
   { id: 'nature', icon: '🌊', label: '深蓝主题' },
   { id: 'minimal', icon: '⚪', label: '默认主题' },
@@ -54,7 +56,7 @@ export default function Navbar() {
               />
             </div>
             <span className={`text-xl font-bold gradient-text`}>
-              Wen's Whispering Words
+              Wen&apos;s Whispering Words
             </span>
           </Link>
 
@@ -107,7 +109,7 @@ export default function Navbar() {
                     <button
                       key={themeOption.id}
                       onClick={() => {
-                        setTheme(themeOption.id as any)
+                        setTheme(themeOption.id)
                         setIsThemeMenuOpen(false)
                       }}
                       className={`w-full px-4 py-2 text-sm text-left flex items-center space-x-2 ${
@@ -147,4 +149,4 @@ export default function Navbar() {
       </div>
     </nav>
   )
-} 
+}

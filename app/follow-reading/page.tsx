@@ -3,12 +3,11 @@
 import { useState, useEffect, useRef } from 'react'
 import { wordApi } from '@/api/word'
 import { UnitWord,WordMeaning} from '@/types/word'
-import { useTheme } from '@/context/ThemeContext'
 import WordListFilters from './components/WordListFilters'
 import { SoundOutlined } from '@ant-design/icons'
 
 export default function FollowReadingPage() {
-  const { theme } = useTheme()
+  // const { theme } = useTheme()
   const [words, setWords] = useState<UnitWord[]>([])
   const [selectedWord, setSelectedWord] = useState<UnitWord | null>(null)
   const [loading, setLoading] = useState(false)
