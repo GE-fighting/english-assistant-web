@@ -6,7 +6,8 @@
     "dev": "next dev --port 3000",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "start-pm2": "pm2 start npm --name english-assistant-web -- start"
   },
   "dependencies": {
     "@ant-design/icons": "^5.5.2",
