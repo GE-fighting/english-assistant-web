@@ -5,7 +5,7 @@ import apiClient from './client';
 export const wordApi = {
   // 获取单词列表
   getWords: async (unitId: number) => {
-    const response = await apiClient.post<ApiResponse<UnitWord[]>>('/unit/words', { unit_id: unitId });
+    const response = await apiClient.post<ApiResponse<UnitWord[]>>('/unit-word/words', { unit_id: unitId });
     return response.data;
   }
 };

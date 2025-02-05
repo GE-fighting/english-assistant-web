@@ -16,24 +16,24 @@ import 'swiper/css/pagination'
 const features = [
   {
     id: 1,
+    title: "AI口语练习",
+    description: "使用AI技术实时评估发音，提供专业反馈",
+    icon: "🎤",
+    link: "/speaking"
+  },
+  {
+    id: 2,
     title: "智能跟读练习",
     description: "通过AI技术，实时评估发音准确度",
     icon: "🎯",
     link: "/follow-reading"
   },
   {
-    id: 2,
+    id: 3,
     title: "丰富的词汇库",
     description: "包含常用词汇和专业术语",
     icon: "📚",
     link: "/vocabulary"
-  },
-  {
-    id: 3,
-    title: "个性化学习计划",
-    description: "根据学习进度智能调整内容",
-    icon: "🎨",
-    link: "/learning-path"
   },
   {
     id: 4,
@@ -66,7 +66,6 @@ const slides = [
 ]
 
 export default function HomePage() {
-
   return (
     <main className="min-h-screen">
       {/* Hero Section with Slider */}
@@ -101,7 +100,19 @@ export default function HomePage() {
                   <div className="container mx-auto px-4 h-full flex items-center">
                     <div className="text-white max-w-2xl">
                       <h1 className="text-5xl font-bold mb-4">{slide.title}</h1>
-                      <p className="text-xl">{slide.subtitle}</p>
+                      <p className="text-xl mb-8">{slide.subtitle}</p>
+                      <Link 
+                        href="/speaking"
+                        className="instagram-gradient text-white px-8 py-3 rounded-full font-medium inline-block hover:opacity-90 transition-opacity transform hover:scale-105 duration-200 mr-4"
+                      >
+                        开始口语练习
+                      </Link>
+                      <Link 
+                        href="/follow-reading"
+                        className="bg-white text-gray-900 px-8 py-3 rounded-full font-medium inline-block hover:bg-opacity-90 transition-opacity transform hover:scale-105 duration-200"
+                      >
+                        跟读练习
+                      </Link>
                     </div>
                   </div>
                 </div>
@@ -111,7 +122,7 @@ export default function HomePage() {
         </Swiper>
       </section>
 
-      {/* Features Grid - 同样调整容器宽度 */}
+      {/* Features Grid */}
       <section className="max-w-5xl mx-auto px-4 py-12">
         <h2 className="text-3xl font-bold text-center mb-12 gradient-text">
           平台特色
@@ -137,7 +148,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* CTA Section - 同样调整容器宽度 */}
+      {/* CTA Section */}
       <section className="max-w-5xl mx-auto px-4 py-16">
         <div className="instagram-card p-12 text-center">
           <h2 className="text-3xl font-bold mb-6 gradient-text">
@@ -146,12 +157,20 @@ export default function HomePage() {
           <p className="mb-8 max-w-2xl mx-auto">
             通过我们的智能学习平台，让英语学习变得更加有趣和高效。
           </p>
-          <Link 
-            href="/follow-reading"
-            className="instagram-gradient text-white px-8 py-3 rounded-full font-medium inline-block hover:opacity-90 transition-opacity transform hover:scale-105 duration-200"
-          >
-            立即开始
-          </Link>
+          <div className="flex justify-center gap-4">
+            <Link 
+              href="/speaking"
+              className="instagram-gradient text-white px-8 py-3 rounded-full font-medium inline-block hover:opacity-90 transition-opacity transform hover:scale-105 duration-200"
+            >
+              开始口语练习
+            </Link>
+            <Link 
+              href="/follow-reading"
+              className="bg-gray-100 text-gray-900 px-8 py-3 rounded-full font-medium inline-block hover:bg-gray-200 transition-colors transform hover:scale-105 duration-200"
+            >
+              跟读练习
+            </Link>
+          </div>
         </div>
       </section>
     </main>
